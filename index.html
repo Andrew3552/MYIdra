@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/headerLogo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <title>MYidra</title>
   </head>
   <body class="body">
     <header class="header">
@@ -17,21 +18,30 @@
               <p>MY Idra</p>
             </a>
           </div>
-          <div class="header__nav">
+          <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <nav class="header__nav">
             <ul class="nav__list">
               <li class="link__item"><a class="linked" href="#">About</a></li>
-              <li class="link__item">
-                <a class="linked" href="#">Advantages</a>
-              </li>
-              <li class="link__item">
-                <a class="linked" href="#">Delivery</a>
-              </li>
+              <li class="link__item"><a class="linked" href="#">Advantages</a></li>
+              <li class="link__item"><a class="linked" href="#">Delivery</a></li>
               <li class="link__item"><a class="linked" href="#">Contact</a></li>
             </ul>
-          </div>
+          </nav>  
           <div class="header__btn">
             <a class="nav__btn" href="#targetSection">Buy</a>
           </div>
+          <nav class="header__nav-mob">
+            <ul class="nav__list-mob">
+              <li class="link__item-mob"><a class="linked-mob" href="#">About</a></li>
+              <li class="link__item-mob"><a class="linked-mob" href="#">Advantages</a></li>
+              <li class="link__item-mob"><a class="linked-mob" href="#">Delivery</a></li>
+              <li class="link__item-mob"><a class="linked-mob" href="#">Contact</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
@@ -326,15 +336,15 @@
                   </small>
                   </div>
                   <div class="pn-select" id="js_pn-select" style="--prefix-length: 2">
-                    <!-- Selected prefix -->
+                    
                     <button class="pn-selected-prefix" aria-label="Select phonenumber prefix" id="js_trigger-dropdown" tabindex="1">
                       <img class="pn-selected-prefix__flag" id="js_selected-flag" src="https://flagpedia.net/data/flags/icon/36x27/nl.png" />
-                      <!-- prettier-ignore -->
+                      
                       <svg class="pn-selected-prefix__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#081626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9" />
                       </svg>
                     </button>
-                    <!-- Phone number input -->
+                    
                     <div class="pn-input">
                       <label class="pn-input__label">Phonenumber*</label>
                       <div class="pn-input__container">
@@ -345,17 +355,17 @@
                         </small>
                       </div>
                     </div>
-                    <!-- Dropdown -->
+                    
                     <div class="pn-dropdown" id="js_dropdown">
                       <div class="pn-search">
-                        <!-- prettier-ignore -->
+                        
                         <svg class="pn-search__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#103155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                           <circle cx="11" cy="11" r="8"></circle>
                           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>
                         <input placeholder="Search for countries" class="pn-search__input search" type="search" id="js_search-input" autocomplete="nope" />
                       </div>
-                      <!-- Country list -->
+                      
                       <ul class="pn-list list" id="js_list"></ul>
                       <div class="pn-list-item pn-list-item--no-results" style="display: none" id="js_no-results-found">
                         No results found
@@ -430,6 +440,7 @@
     </footer>
 
     <button id="scrollToTopBtn" title="Піднятися нагору">↑</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
     <script src="js/script.js"></script>

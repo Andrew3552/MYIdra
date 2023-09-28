@@ -35,6 +35,7 @@
 
 .header__body {
   justify-content: space-around;
+  position: relative;
 }
 
 .link__logo {
@@ -44,7 +45,125 @@
   color: #ffffff;
 }
 
+.menu-toggle {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  color: #fff;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s; /* Анимация полосок */
+}
+
+.header__nav-mob{
+  display: none;
+}
+
+
+.header__nav-mob.active{
+  color: #0050d2;
+  display: block;
+  position: absolute;
+  top: 57px;
+  right: 0px;
+}
+.linked-mob::before,
+.linked-mob::after{
+  content: "";
+  position: absolute;
+  left: 2px;
+  width: 4px;
+  height: 0;
+  background-color: #0050d2;
+  transition: height 0.5s ease-in-out;
+}
+
+.linked-mob::before {
+  top: 0;
+}
+
+.linked-mob::after{ 
+  bottom: 0;
+}
+.linked-mob:hover::after,
+.linked-mob:hover::before {
+  height: 100%;
+}
+
+
+.nav__list-mob{
+  border: 1px solid #0050d2;
+  background: white;
+}
+
+/* Стили для кнопки в состоянии "active" (крестик) */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+@media (max-width: 992px) {
+
+.header{
+  padding: 15px 0;
+}
+
+.header__body{
+  justify-content: flex-start;
+}
+
+.menu-toggle{
+  display: block;
+}
+
+.header__nav{
+  display: none;  
+}
+
+.link__item-mob{
+  position: relative;
+color: #0050d2;
+font-family: Manrope;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.link__item-mob{
+  padding: 10px 65px 10px 10px;
+}
+
+.nav__btn {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+
+
+}
+
 .nav__list {
+  
   column-gap: 25px;
   font-weight: 500;
   font-size: 25px;
