@@ -13,7 +13,37 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+
+
+//burgers
+  $(document).ready(function() {
+    const menuToggle = $(".menu-toggle");
+    const mobileNav = $(".header__nav-mob");
   
+    menuToggle.click(function(e) {
+      e.stopPropagation(); 
+      $(document).click(function(e) {
+        if (!e.target.closest('.menu-toggle, .header__nav-mob')) {
+          $('.menu-toggle, .header__nav-mob').removeClass('active');
+          $(document).off('click');
+        }
+      });
+      $('.menu-toggle, .header__nav-mob').toggleClass('active');
+    });
+  
+    mobileNav.click(function(e) {
+      e.stopPropagation();
+    });
+  });
+
+
+  
+  
+  
+
+
+  //scroll
   function scrollToSection() {
     const targetSection = document.getElementById ('targetSection');
     targetSection.scrollIntoView({ behavior: 'smooth' });
