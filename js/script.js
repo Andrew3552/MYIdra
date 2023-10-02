@@ -41,6 +41,23 @@ $(document).ready(function() {
 
 
 
+// Swiper
+
+    const swiper = new Swiper('.swiper', {
+      enabled: true,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints:  {
+        763: {
+          enabled: false,
+        },
+      },
+    });
+    
+
 
 
 //scroll

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/headerLogo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
     <title>MYidra</title>
   </head>
   <body class="body">
@@ -50,7 +54,7 @@
         <div class="container">
           <div class="main-title__body">
             <div class="main-title__img">
-              <img src="img/background1.png" alt="background">
+              <img src="img/main-img-mob.png" alt="background">
             </div>
             <div class="main-title__smb">
               <h2 class="title__smb">
@@ -69,7 +73,7 @@
           </div>
         </div>
       </section>
-      <!-- <section class="main-wellness">
+      <section class="main-wellness">
         <div class="container">
           <div class="main-wellness__body">
             <div class="main-wellness__title">
@@ -78,43 +82,46 @@
             <div class="wellness-info">
               <ul class="wellness-info__list">
                 <li class="info__list">
-                  <img
-                    class="info__list_img"
-                    src="img/wellness1.png"
-                    alt="alt"
-                  />
-                  <h3 class="info__title">Fills up the detachable glass</h3>
-                  <p class="info__text text">
-                    MY Idra fills up the detachable glass with timed drops to
-                    ensure you're drinking enough and at the right time, giving
-                    you a visual cue when you need to drink.
-                  </p>
+                  <div class="list__img">
+                    <img class="info__list_img" src="img/wellness1.png" alt="alt"
+                    />
+                  </div>
+                  <div class="list__text">
+                   <h3 class="info__title">Fills up the detachable glass</h3>
+                    <p class="info__text text">
+                       MY Idra fills up the detachable glass with timed drops to
+                      ensure you're drinking enough and at the right time, giving
+                      you a visual cue when you need to drink.
+                   </p>
+                  </div>
                 </li>
                 <li class="info__list">
-                  <img
-                    class="info__list_img"
-                    src="img/wellnes2.png"
-                    alt="alt"
+                  <div class="list__img">
+                  <img class="info__list_img" src="img/wellnes2.png" alt="alt"
                   />
+                </div>
+                <div class="list__text">
                   <h3 class="info__title">Environmental friendliness</h3>
                   <p class="info__text text">
                     Each element of MY Idra is designed for longevity and
                     sustainability, completely removing the use of plastic in
                     our production.
                   </p>
+                </div>
                 </li>
                 <li class="info__list">
-                  <img
-                    class="info__list_img"
-                    src="img/wellness3.png"
-                    alt="alt"
+                  <div class="list__img">
+                  <img class="info__list_img" src="img/wellness3.png" alt="alt"
                   />
+                </div>
+                <div class="list__text">
                   <h3 class="info__title">The best quality materials</h3>
                   <p class="info__text text">
                     We use only the best quality materials, ceramic, glass,
                     aluminum, stainless steel 18/8 and food grade silicone,
                     which are designed to never be thrown away.
                   </p>
+                </div>
                 </li>
               </ul>
             </div>
@@ -132,9 +139,9 @@
                 from premium materials
               </p>
             </div>
-            <div class="myidra-info">
-              <ul class="myidra-info__list">
-                <li class="m-info__list">
+            <div class="myidra-info swiper" >
+              <div class="myidra-info__list swiper-wrapper">
+                <div class="m-info__list swiper-slide">
                   <img
                     class="m-info__list_img"
                     src="img/myidra1.png"
@@ -145,8 +152,8 @@
                     Simply twist the dial on the bottom to track your intake. It
                     fills up a 236ml glass every 15 minutes.
                   </p>
-                </li>
-                <li class="m-info__list">
+                </div>
+                <div class="m-info__list swiper-slide">
                   <img
                     class="m-info__list_img"
                     src="img/myidra2.png"
@@ -157,8 +164,8 @@
                     Thanks to the UV protection built into the PET, it prevents
                     the vital activity of microorganisms.
                   </p>
-                </li>
-                <li class="m-info__list">
+                </div>
+                <div class="m-info__list swiper-slide">
                   <img
                     class="m-info__list_img"
                     src="img/myidra3.png"
@@ -169,8 +176,10 @@
                     MY Idra enriching the composition of water with minerals and
                     improving its taste.
                   </p>
-                </li>
-              </ul>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
         </div>
@@ -231,7 +240,7 @@
           </div>
         </div>
       </section>
-      <section class="throughout">
+      <!-- <section class="throughout">
         <div class="container">
           <div class="throughout__body">
             <div class="throughout__title">
@@ -441,6 +450,7 @@
     </footer> -->
 
     <button id="scrollToTopBtn" title="Піднятися нагору">↑</button>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>

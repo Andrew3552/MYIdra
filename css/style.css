@@ -184,12 +184,17 @@
 
 .main-title {
   background: url("..//img/background1.png") center no-repeat;
+  
   margin-bottom: 105px;
 }
 
 .main-title__body {
   max-width: 568px;
   padding-top: 170px;
+}
+
+.main-title__img{
+  display: none;
 }
 
 .main-title__smb {
@@ -286,9 +291,6 @@
   display: flex;
   justify-content: space-around;
 }
-.m-info__list {
-  position: relative;
-}
 
 .m-info__title {
   font-weight: 600;
@@ -303,14 +305,12 @@
   color: #ffffff;
   text-align: center;
 }
+.m-info__list{
+  text-align: center;
+}
 
-.m-info__list_img {
-  position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
+.m-info__list_img{
+  margin-bottom: 14px;
 }
 
 .claysilite,
@@ -598,12 +598,6 @@
   bottom: -17px;
   opacity: 1;
 }
-
-/* *,
-*:before,
-*:after {
-  box-sizing: inherit;
-} */
 
 input[type="search"],
 input[type="tel"],
@@ -1168,10 +1162,77 @@ input[type="number"] {
   background-color: #0056b3;
 }
 
-@media (max-width: 762px) {
+@media screen and (max-width: 1430px) {
+  .main-title {
+    background-position: right center;
+  }
+  
+}
+
+@media (max-width: 992px) {
+
+  .header {
+    padding: 25px 0;
+    margin-bottom: 30px;
+  }
+
+  .logo__img{
+    width: 35px;
+    height: 29px;
+  }
+
+  .link__logo{
+    font-size: 18px;
+  }
+
+  .nav__list {
+    column-gap: 12px;
+    font-size: 18px;
+    line-height: 1;
+    color: #ffffff;
+  }
+  .linked {
+    padding: 9px 12px;
+  }
+
+  .nav__btn{
+    font-size: 18px;
+    padding: 9px 40px;
+  }
+
+  .main-title{
+    margin-bottom: 50px;
+  }
+
+  .title__smb{
+    font-size: 75px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .wellness-info__list{
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .info__list{
+   display: grid;
+   grid-template-columns: 1fr 250px;
+   row-gap: 20px;
+   column-gap: 20px;
+  }
+
+}
+
+@media screen and (max-width: 762px) {
+
+  
+
   .header {
     padding: 15px 0;
-    margin: 0;
+    margin-bottom: 0;
   }
 
   .header__body {
@@ -1179,7 +1240,7 @@ input[type="number"] {
   }
 
   .link__logo {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .logo__img {
@@ -1215,47 +1276,117 @@ input[type="number"] {
   }
 
   .main-title{
-    background-image: url("../img/main-img-mob.png") ;
-    margin: 0;
+    background-image: none;
+    margin: 20px;
   }
 
   .main-title__body {
     padding: 0 10px;
+    margin: 0 auto;
   }
-}
 
-@media (max-width: 992px) {
+  .main-title__smb{
+    min-height: 0;
+  }
 
-  .header {
-    padding: 25px 0;
+  .main-title__img{
+    display: block;
+  }
+
+  .main-title__img img{
+    width: 100%;
+  }
+
+  .title__smb{
+    font-size: 45px;
+  }
+
+  .text{
+    font-size: 16px;
+  }
+
+  .title__btn{
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-wellness{
     margin-bottom: 30px;
   }
 
-  .logo__img{
-    width: 35px;
-    height: 29px;
+  .main-wellness__title{
+    margin-bottom: 20px;
+    font-size: 40px;
   }
 
-  .link__logo{
-    font-size: 18px;
+  .wellness-info__list{
+    align-items: center;
+    row-gap: 20px;
   }
 
-  .nav__list {
-    column-gap: 12px;
-    font-size: 18px;
-    line-height: 1;
-    color: #ffffff;
-  }
-  .linked {
-    padding: 9px 12px;
+  .info__list{
+    grid-template-columns: 1fr;
+    row-gap: 0;
+   }
+
+  .info__list_img{
+    margin-bottom: 20px;
   }
 
-  .nav__btn{
-    font-size: 18px;
-    padding: 9px 40px;
+  .info__title{
+    margin-bottom: 10px;
   }
 
-  .main-title {
-    background-position: right center;
+  .main-myidra__title h2{
+    font-size: 40px;
   }
-}
+
+  .main-myidra__title p{
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .main-myidra{
+    padding: 30px 0 30px;
+  }
+
+  .myidra-info__list {
+    
+    justify-content: initial;
+  }
+
+  .swiper {
+    width: 500px;
+    height: 200px;
+  }
+
+  .m-info__list{
+    margin: 0 100px
+  }
+
+  .m-info__text{
+    max-width: 300px;
+    margin: 0 auto;
+  }
+    
+  }
+
+  @media screen and (max-width: 576px) {
+
+    .swiper {
+      width: 300px;
+      height: 250px;
+    }
+    .m-info__list{
+      margin: 0;
+    }
+
+    .m-info__text{
+      max-width: 200px;
+      margin: 0 auto;
+    }
+    
+  }
+
+
+
