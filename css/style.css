@@ -461,11 +461,14 @@
   column-gap: 30px;
 }
 
+.order__item{
+  column-gap: 161px;
+}
+
 .small__img {
   display: flex;
   flex-direction: column;
   width: 114px;
-
   gap: 32px;
 }
 
@@ -477,10 +480,6 @@
 
 .column_item {
   border-radius: 20px;
-}
-
-.orde__title_description {
-  padding-left: 131px;
 }
 
 .order__title {
@@ -1210,6 +1209,35 @@ input[type="number"] {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .order__item {
+    column-gap: 90px;
+  }
+
+  .product-purchase{
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  .cost{
+    margin-bottom: 20px;
+  }
+
+  .cost__btn{
+    max-width: 200px;
+  }
+
+  .large__img{
+    width: 350px;
+    height: 350px;
+  }
+
+  .small__img{
+    width: 85px;
+  }
+  
+}
+
 @media screen and (max-width: 1040px) {
   .claysilite__item_text {
     max-width: 400px;
@@ -1349,7 +1377,11 @@ input[type="number"] {
     font-size: 45px;
   }
 
-  .text {
+  .text,
+  .order__description,
+  .order__specifications,
+  .claysilite__grid_link,
+  .strips__text {
     font-size: 16px;
   }
 
@@ -1387,7 +1419,8 @@ input[type="number"] {
 
   .main-myidra__title h2,
   .claysilite__title,
-  .throughout__title {
+  .throughout__title,
+  .order__title {
     font-size: 40px;
   }
 
@@ -1489,10 +1522,6 @@ input[type="number"] {
     font-size: 22px;
   }
 
-  .claysilite__grid_link{
-    font-size: 16px;
-  }
-
   .throughout{
     margin-bottom: 32px;
   }
@@ -1520,6 +1549,73 @@ input[type="number"] {
   .throughout__title_img{
     padding: 20px 0 10px;
   }
+
+  .order__body{
+    margin: 0 auto;
+  }
+
+  .order__item{
+    column-gap: 20px;
+    justify-content: center;
+  }
+
+  .image__gallery{
+    flex-direction: column;
+    row-gap: 18px;
+  }
+
+  .small__img{
+    width: 60px;
+    gap: 18px;
+    order: 2;
+  }
+
+  .big__img{
+    order: 1;
+  }
+
+  .large__img{
+    width: 130px;
+    height: 130px;
+  }
+
+  .orde__title_description{
+    padding-left: 0;
+  }
+
+  .order__title,
+  .order__description,
+  .order__specifications {
+    margin-bottom: 10px;
+  }
+
+  .specifications__white,
+  .specifications__gray {
+    width: 20px;
+    height: 20px;
+  }
+
+  .product-purchase{
+    flex-direction: column;
+    row-gap: 15px;
+    margin-bottom: 31px;
+  }
+
+  .cost{
+    font-size: 26px;
+  }
+
+  .cost__btn{
+    font-size: 16px;
+    padding: 7px 24px;
+    max-width: 100px;
+  }
+
+  .strip{
+    display: none;
+  }
+
+  
 }
 
 @media screen and (max-width: 576px) {
@@ -1534,5 +1630,9 @@ input[type="number"] {
   .m-info__text {
     max-width: 200px;
     margin: 0 auto;
+  }
+
+  .order__description {
+    max-width: 155px;
   }
 }
