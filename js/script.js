@@ -108,50 +108,6 @@ document.body.classList.remove('no-scroll');
 
 
 
-// const section = document.getElementById('targetSection');
-// const popup = document.getElementById('popupForm');
-// const openFormBtn = document.getElementById('openFormBtn');
-// const closeBtn = popup.querySelector('.close');
-
-// function showPopup() {
-//   popup.style.display = 'block';
-//   document.body.style.overflow = 'hidden'; // Забороняємо прокрутку документа
-// }
-
-// function hidePopup() {
-//   popup.style.display = 'none';
-//   document.body.style.overflow = 'auto'; // Дозволяємо прокрутку документа
-// }
-
-// // Показати поп-ап
-// openFormBtn.addEventListener('click', () => {
-//   showPopup();
-// });
-
-// // Приховати поп-ап
-// closeBtn.addEventListener('click', () => {
-//   hidePopup();
-// });
-
-
-
-
-// const openFormBtn = document.getElementById('openFormBtn');
-// const popupForm = document.getElementById('popupForm');
-// const closeBtn = popupForm.querySelector('.close');
-
-// openFormBtn.addEventListener('click', () => {
-//   popupForm.style.display = 'block';
-// });
-
-// closeBtn.addEventListener('click', () => {
-//   popupForm.style.display = 'none';
-// });
-
-
-
-
-
 
 const selectContainer = document.getElementById("js_pn-select");
 const countrySearchInput = document.getElementById("js_search-input");
@@ -505,142 +461,35 @@ if (!emailValue.trim() || emailPattern.test(emailValue)) {
 
 
 
-// const button = document.querySelector('.submit__button');
-// const arrowIcon = document.querySelector('.icon-arrow');
-// const birdIcon = document.querySelector('.icon-check');
 
-// button.addEventListener('click', (event) => {
-//   event.preventDefault(); // Забороняємо перехід за замовчуванням
-//   anime({
-//     targets: arrowIcon,
-//     opacity: 0,
-//     duration: 300, // Тривалість анімації
-//     easing: 'easeInOutQuad', // Згладжена функція руху для більшої плавності
-//     complete: () => {
-//       arrowIcon.classList.add('hidden');
-//       birdIcon.classList.remove('hidden');
-//     }
-  
-//   });
-// });
 
-// Получаем все кнопки на странице
-// const buttons = document.querySelectorAll('.submit__button');
 
-// // Проходимся по каждой кнопке и добавляем обработчик событий
-// buttons.forEach((button) => {
-//   button.addEventListener('click', (event) => {
-//     event.preventDefault();
-  
-//     const arrowIcon = button.querySelector('.icon-arrow');
-//     const birdIcon = button.querySelector('.icon-check');
-  
-//     anime({
-//       targets: arrowIcon,
-//       opacity: 0,
-//       duration: 1100,
-//       scale: 0,
-//       easing: 'easeInOutQuad',
-//       complete: () => {
-//         arrowIcon.classList.add('hidden');
-//         birdIcon.classList.remove('hidden');
-//       }
-//     });
-//   });
-// });
+const button = document.querySelector('.submit__button');
+const arrowIcon = document.querySelector('.icon-arrow');
+const birdIcon = document.querySelector('.icon-check');
 
-const buttons = document.querySelectorAll('.submit__button');
-
-buttons.forEach((button) => {
 button.addEventListener('click', (event) => {
   event.preventDefault();
-  
-  const arrowIcon = button.querySelector('.icon-arrow');
-  const birdIcon = button.querySelector('.icon-check');
-  
-  // Анимация для исчезновения стрелки и появления птички
+
   anime({
-    targets: [arrowIcon, birdIcon], // Анимируем оба элемента одновременно
-    opacity: [1, 0], // Сначала opacity 1 (показать), затем opacity 0 (скрыть)
-    scale: [1, 0], // Сначала масштаб 1 (показать), затем масштаб 0 (скрыть)
-    duration: 1100,
+    targets: arrowIcon,
+    opacity: 0,
+    duration: 300,
     easing: 'easeInOutQuad',
+    complete: () => {
+      arrowIcon.classList.add('hidden');
+      birdIcon.classList.remove('hidden');
+      animateBirdIcon();
+    }
   });
 });
-});
 
-
-// const button = document.querySelector('.submit__button');
-// const arrowIcon = document.querySelector('.icon-arrow');
-// const birdIcon = document.querySelector('.icon-check');
-
-// button.addEventListener('click', (event) => {
-//   event.preventDefault();
-
-//   anime({
-//     targets: arrowIcon,
-//     opacity: 0,
-//     duration: 300,
-//     easing: 'easeInOutQuad',
-//     complete: () => {
-//       arrowIcon.classList.add('hidden');
-//       birdIcon.classList.remove('hidden');
-//       animateBirdIcon();
-//     }
-//   });
-// });
-
-// function animateBirdIcon() {
-//   anime({
-//     targets: birdIcon,
-//     opacity: 1,
-//     scale: 1,
-//     duration: 300,
-//     easing: 'easeInOutQuad'
-//   });
-// }
-
-// const button = document.querySelector('.submit__button');
-// const arrowIcon = document.querySelector('.icon-arrow');
-// const birdIcon = document.querySelector('.icon-check');
-
-// button.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   let opacity = 1;
-//   const animationDuration = 300;
-//   const animationStartTime = performance.now();
-
-//   function animateIcon(timestamp) {
-//     const progress = timestamp - animationStartTime;
-//     if (progress < animationDuration) {
-//       opacity = 1 - progress / animationDuration;
-//       arrowIcon.style.opacity = opacity;
-//       requestAnimationFrame(animateIcon);
-//     } else {
-//       arrowIcon.classList.add('hidden');
-//       birdIcon.classList.remove('hidden');
-//     }
-//   }
-
-//   requestAnimationFrame(animateIcon);
-// });
-
-// const button = document.querySelector('.submit__button');
-// const arrowIcon = document.querySelector('.icon-arrow');
-// const birdIcon = document.querySelector('.icon-check');
-
-// button.addEventListener('click', (event) => {
-//   event.preventDefault();
-
-//   arrowIcon.classList.add('hidden');
-//   birdIcon.classList.remove('hidden');
-// });
-
-// const button = document.querySelector('.submit__button');
-
-// button.addEventListener('click', (event) => {
-//   event.preventDefault();
-
-//   button.classList.add('hidden');
-//   birdIcon.classList.remove('hidden');
-// });
+function animateBirdIcon() {
+  anime({
+    targets: birdIcon,
+    opacity: 1,
+    scale: 1,
+    duration: 300,
+    easing: 'easeInOutQuad'
+  });
+}

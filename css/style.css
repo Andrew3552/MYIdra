@@ -1081,53 +1081,13 @@ input[type="number"] {
 }
 
 .submit__button {
-  background: none;
-  border: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-
-.icon-check,
-.icon-arrow {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-/* Скрываем птичку по умолчанию */
-.icon-check {
-  opacity: 0;
-  transform: scale(0);
-}
-
-/* .submit__button {
- 
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.3s, transform 0.3s;
-  
+  display: inline-block;
 }
 
 .hidden {
- 
   display: none;
 }
-.icon-check {
-  opacity: 0;
-  transform: scale(0);
-  
-}
-
-.icon-check:not(.hidden) {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.3s, transform 0.3s; */
-/* } */
 
 .footer {
   background: #0050d2;
@@ -1136,7 +1096,14 @@ input[type="number"] {
 
 .footer__body {
   display: flex;
+  justify-content: center;
+  column-gap: 130px;
+  }
+
+.footer__wrap_item{
+  display: flex;
   justify-content: space-between;
+  width: 70%;
 }
 
 .footer__title {
@@ -1144,7 +1111,6 @@ input[type="number"] {
   display: flex;
   align-items: flex-start;
   color: #fff;
-  font-family: Roboto;
   font-size: 25px;
   font-weight: 500;
   line-height: 1;
@@ -1163,6 +1129,7 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+  
 }
 
 .footer__item {
@@ -1176,6 +1143,10 @@ input[type="number"] {
 
 .footer__item img {
   padding-right: 10px;
+}
+
+.social__mob{
+  display: none;
 }
 
 #scrollToTopBtn {
@@ -1299,10 +1270,34 @@ input[type="number"] {
   }
 }
 
+@media screen and (max-width: 951px) {
+ .footer__body{
+  column-gap: 90px;
+ }
+}
+
 @media screen and (max-width: 870px) {
-  .claysilite__item_text {
-    max-width: 350px;
+  .footer__body{
+    column-gap: 35px;
+   }
+}
+
+@media screen and (max-width: 845px) {
+  .info__list {
+    grid-template-columns: 1fr;
   }
+  
+}
+
+@media screen and (max-width: 824px) {
+  .social__mob {
+    display: block;
+  }
+
+  .social__desktop{
+    display: none;
+  }
+  
 }
 
 @media screen and (max-width: 762px) {
@@ -1381,7 +1376,10 @@ input[type="number"] {
   .order__description,
   .order__specifications,
   .claysilite__grid_link,
-  .strips__text {
+  .strips__text,
+  .question__text,
+  .footer__item,
+  .footer__title h3 {
     font-size: 16px;
   }
 
@@ -1420,7 +1418,8 @@ input[type="number"] {
   .main-myidra__title h2,
   .claysilite__title,
   .throughout__title,
-  .order__title {
+  .order__title,
+  .question__title {
     font-size: 40px;
   }
 
@@ -1613,6 +1612,48 @@ input[type="number"] {
 
   .strip{
     display: none;
+  }
+
+  .footer__body{
+    flex-direction: column;
+    align-items: start;
+    row-gap: 23px;
+  }
+
+  .footer__title img{
+    width: 31px;
+    height: 24px;
+    top: -8px
+  }
+
+  .footer__title h3{
+    padding-left: 35px;
+  }
+
+  .footer__wrap{
+    row-gap: 9px;
+  }
+
+  .footer__wrap_item{
+    width: 100%;
+  }
+
+  .social__mob{
+    margin-top: 17px
+  }
+
+  .social__mob-img {
+    width: 18px;
+    height: 12px;
+  }
+
+  .social__mob-img a{
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__item img{
+    padding-right: 5px;
   }
 
   
